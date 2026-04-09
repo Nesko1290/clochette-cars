@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clochette Cars — Garage Automobile à Ternay</title>
-    <meta name="description" content="Clochette Cars, votre garage automobile à Ternay. Mécanique, carrosserie, pneumatiques. Prenez rendez-vous dès maintenant.">
+    <title>Clochette Cars &mdash; Garage Automobile a Ternay</title>
+    <meta name="description" content="Clochette Cars, votre garage automobile a Ternay. Mecanique, carrosserie, pneumatiques. Prenez rendez-vous des maintenant.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* ── Reset & Base ── */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --blue: #001E50;
             --blue-light: #00437A;
-            --accent: #00B0F0;
+            --accent: #0EA5E9;
+            --accent-muted: #7dd3fc;
             --white: #FFFFFF;
-            --gray-50: #F7F8FA;
-            --gray-100: #ECEEF1;
-            --gray-200: #D4D8DE;
-            --gray-500: #6B7280;
-            --gray-700: #374151;
-            --gray-900: #111827;
-            --radius: 12px;
-            --shadow: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
-            --shadow-lg: 0 4px 12px rgba(0,0,0,.08), 0 16px 48px rgba(0,0,0,.1);
-            --transition: .3s cubic-bezier(.4,0,.2,1);
+            --off-white: #F8FAFB;
+            --gray-50: #F1F5F9;
+            --gray-100: #E2E8F0;
+            --gray-200: #CBD5E1;
+            --gray-400: #94A3B8;
+            --gray-500: #64748B;
+            --gray-700: #334155;
+            --gray-900: #0F172A;
+            --shadow: 0 1px 3px rgba(15,23,42,.04), 0 4px 16px rgba(15,23,42,.06);
+            --shadow-lg: 0 4px 12px rgba(15,23,42,.06), 0 20px 48px rgba(15,23,42,.08);
+            --transition: .35s cubic-bezier(.16,1,.3,1);
         }
 
         html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--gray-900);
             background: var(--white);
             line-height: 1.6;
@@ -44,34 +45,33 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* ── Typography (VW-inspired: geometric, clean, tight tracking) ── */
         h1, h2, h3, h4 {
             font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.15;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
         }
 
-        /* ── Utility ── */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         .section-label {
             display: inline-block;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 3.2rem);
             color: var(--blue);
             margin-bottom: 16px;
+            letter-spacing: -0.03em;
         }
         .section-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--gray-500);
             max-width: 560px;
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         /* ── Navbar ── */
@@ -79,10 +79,10 @@
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 1000;
-            background: rgba(255,255,255,.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,.06);
+            background: rgba(255,255,255,.88);
+            backdrop-filter: blur(20px) saturate(1.4);
+            -webkit-backdrop-filter: blur(20px) saturate(1.4);
+            border-bottom: 1px solid rgba(15,23,42,.06);
             transition: var(--transition);
         }
         .navbar .container {
@@ -101,15 +101,14 @@
             letter-spacing: -0.03em;
         }
         .navbar-logo .logo-icon {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             background: var(--blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 18px;
+            font-size: 15px;
             font-weight: 900;
         }
         .navbar-links {
@@ -128,10 +127,8 @@
         .navbar-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
             background: var(--accent);
             transition: var(--transition);
         }
@@ -162,8 +159,7 @@
         }
         .mobile-toggle span {
             display: block;
-            width: 24px;
-            height: 2px;
+            width: 24px; height: 2px;
             background: var(--blue);
             border-radius: 2px;
             transition: var(--transition);
@@ -172,7 +168,7 @@
         /* ── Hero ── */
         .hero {
             position: relative;
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, var(--blue) 0%, #002D6B 50%, var(--blue-light) 100%);
@@ -183,22 +179,22 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0,176,240,.12) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 80% at 20% 80%, rgba(0,30,80,.5) 0%, transparent 60%);
+                radial-gradient(ellipse 70% 50% at 75% 45%, rgba(14,165,233,.14) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 80% at 15% 85%, rgba(0,30,80,.5) 0%, transparent 60%);
         }
         .hero-grid {
             position: absolute;
             inset: 0;
             background-image:
-                linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-            background-size: 60px 60px;
+                linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+            background-size: 64px 64px;
         }
         .hero .container {
             position: relative;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 64px;
             align-items: center;
             padding-top: 72px;
         }
@@ -208,10 +204,10 @@
             align-items: center;
             gap: 8px;
             padding: 6px 16px 6px 8px;
-            background: rgba(255,255,255,.1);
-            border: 1px solid rgba(255,255,255,.15);
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.12);
             border-radius: 50px;
-            margin-bottom: 28px;
+            margin-bottom: 32px;
             backdrop-filter: blur(8px);
         }
         .hero-badge-dot {
@@ -222,28 +218,29 @@
         }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: .4; }
+            50% { opacity: .35; }
         }
         .hero-badge span {
             font-size: 13px;
             font-weight: 500;
-            color: rgba(255,255,255,.85);
+            color: rgba(255,255,255,.8);
         }
         .hero h1 {
             font-size: clamp(2.5rem, 5.5vw, 4.2rem);
             color: var(--white);
             margin-bottom: 24px;
-            line-height: 1.08;
+            line-height: 1.06;
             font-weight: 900;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.035em;
         }
-        .hero h1 .accent { color: var(--accent); }
+        .hero h1 .accent { color: var(--accent-muted); }
         .hero-text {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,.7);
+            font-size: 1.1rem;
+            color: rgba(255,255,255,.65);
             max-width: 480px;
             margin-bottom: 40px;
-            line-height: 1.75;
+            line-height: 1.8;
+            font-weight: 400;
         }
         .hero-actions {
             display: flex;
@@ -256,7 +253,7 @@
             gap: 10px;
             padding: 16px 32px;
             background: var(--accent);
-            color: var(--blue);
+            color: var(--white);
             border-radius: 50px;
             font-size: 15px;
             font-weight: 700;
@@ -265,10 +262,11 @@
             cursor: pointer;
         }
         .btn-primary:hover {
-            background: #33C4F5;
+            background: #38BDF8;
             transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(0,176,240,.3);
+            box-shadow: 0 8px 28px rgba(14,165,233,.35);
         }
+        .btn-primary:active { transform: translateY(0) scale(.98); }
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -276,7 +274,7 @@
             padding: 16px 32px;
             background: transparent;
             color: var(--white);
-            border: 1.5px solid rgba(255,255,255,.25);
+            border: 1.5px solid rgba(255,255,255,.2);
             border-radius: 50px;
             font-size: 15px;
             font-weight: 600;
@@ -284,82 +282,111 @@
             cursor: pointer;
         }
         .btn-secondary:hover {
-            background: rgba(255,255,255,.1);
-            border-color: rgba(255,255,255,.4);
+            background: rgba(255,255,255,.08);
+            border-color: rgba(255,255,255,.35);
         }
 
-        /* Hero image */
-        .hero-visual {
-            position: relative;
-            z-index: 2;
-        }
+        .hero-visual { position: relative; z-index: 2; }
         .hero-image-wrapper {
             position: relative;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 24px 80px rgba(0,0,0,.3);
+            box-shadow: 0 24px 80px rgba(0,0,0,.25);
         }
-        .hero-image-placeholder {
+        .hero-image-wrapper img {
             width: 100%;
             aspect-ratio: 4/3;
-            background: linear-gradient(135deg, #1a3a5c, #0d2744);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-        }
-        .hero-image-placeholder svg {
-            width: 80px;
-            height: 80px;
-            opacity: .35;
-        }
-        .hero-image-placeholder span {
-            color: rgba(255,255,255,.3);
-            font-size: 14px;
-            font-weight: 500;
+            object-fit: cover;
         }
         .hero-float-card {
             position: absolute;
-            bottom: -20px;
-            left: -30px;
+            bottom: -20px; left: -30px;
             background: var(--white);
-            border-radius: 16px;
+            border-radius: 18px;
             padding: 20px 24px;
             box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255,255,255,.15);
             display: flex;
             align-items: center;
             gap: 16px;
-            animation: float 4s ease-in-out infinite;
+            animation: float 5s cubic-bezier(.4,0,.2,1) infinite;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+            50% { transform: translateY(-10px); }
         }
         .hero-float-icon {
             width: 48px; height: 48px;
-            background: rgba(0,176,240,.1);
-            border-radius: 12px;
+            background: rgba(14,165,233,.08);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .hero-float-card .label {
             font-size: 12px;
-            color: var(--gray-500);
+            color: var(--gray-400);
             font-weight: 500;
         }
         .hero-float-card .value {
             font-size: 1.1rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--blue);
+        }
+
+        /* ── Brand Marquee ── */
+        .brand-marquee {
+            background: var(--white);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--gray-100);
+            overflow: hidden;
+        }
+        .brand-marquee-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gray-400);
+            margin-bottom: 24px;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-track:hover { animation-play-state: paused; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .brand-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 48px;
+            flex-shrink: 0;
+            opacity: .55;
+            transition: opacity .3s ease;
+        }
+        .brand-item:hover { opacity: 1; }
+        .brand-item img, .brand-item svg {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+        }
+        .brand-item span {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--gray-700);
+            letter-spacing: -0.02em;
+            white-space: nowrap;
         }
 
         /* ── Trust Bar ── */
         .trust-bar {
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-100);
-            padding: 32px 0;
+            background: var(--off-white);
+            padding: 36px 0;
         }
         .trust-bar .container {
             display: flex;
@@ -378,8 +405,9 @@
         }
         .trust-icon {
             width: 40px; height: 40px;
-            background: var(--gray-50);
-            border-radius: 10px;
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -388,22 +416,24 @@
         /* ── Services ── */
         .services {
             padding: 120px 0;
-            background: var(--gray-50);
+            background: var(--off-white);
         }
         .services-header {
-            text-align: center;
             margin-bottom: 64px;
         }
-        .services-header .section-subtitle { margin: 0 auto; }
+        .services-header .section-subtitle { }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1.2fr 1fr;
             gap: 24px;
+        }
+        .services-grid .service-card:first-child {
+            grid-row: 1 / 3;
         }
         .service-card {
             background: var(--white);
-            border-radius: 16px;
-            padding: 40px 32px;
+            border-radius: 20px;
+            padding: 36px 32px;
             transition: var(--transition);
             border: 1px solid var(--gray-100);
             position: relative;
@@ -416,33 +446,45 @@
             height: 3px;
             background: var(--accent);
             transform: scaleX(0);
+            transform-origin: left;
             transition: var(--transition);
         }
         .service-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 20px 48px rgba(15,23,42,.07);
             border-color: transparent;
         }
         .service-card:hover::before { transform: scaleX(1); }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 24px;
+        }
+        .services-grid .service-card:first-child img {
+            height: 260px;
+        }
         .service-icon {
-            width: 56px; height: 56px;
-            background: linear-gradient(135deg, rgba(0,30,80,.06), rgba(0,176,240,.08));
+            width: 52px; height: 52px;
+            background: linear-gradient(135deg, rgba(0,30,80,.05), rgba(14,165,233,.07));
             border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
         .service-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             color: var(--blue);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .service-card p {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--gray-500);
             line-height: 1.7;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+            max-width: 65ch;
         }
         .service-list {
             display: flex;
@@ -463,32 +505,23 @@
         }
 
         /* ── Why Us ── */
-        .why-us {
-            padding: 120px 0;
-        }
+        .why-us { padding: 120px 0; }
         .why-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.1fr;
             gap: 80px;
             align-items: center;
         }
         .why-image {
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
         }
-        .why-image-placeholder {
+        .why-image img {
             width: 100%;
             aspect-ratio: 4/3;
-            background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            object-fit: cover;
         }
-        .why-image-placeholder svg { width: 64px; height: 64px; opacity: .25; }
-        .why-image-placeholder span { color: var(--gray-500); font-size: 14px; }
         .why-features {
             display: flex;
             flex-direction: column;
@@ -502,8 +535,9 @@
         .why-feature-icon {
             flex-shrink: 0;
             width: 48px; height: 48px;
-            background: rgba(0,176,240,.08);
-            border-radius: 12px;
+            background: rgba(14,165,233,.06);
+            border: 1px solid rgba(14,165,233,.1);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -524,23 +558,32 @@
         .stats {
             background: var(--blue);
             padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .stats::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 80% 30%, rgba(14,165,233,.12) 0%, transparent 60%);
         }
         .stats .container {
+            position: relative;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 32px;
             text-align: center;
         }
-        .stat-item {}
         .stat-number {
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 900;
             color: var(--white);
             letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
         }
         .stat-label {
             font-size: 14px;
-            color: rgba(255,255,255,.6);
+            color: rgba(255,255,255,.55);
             font-weight: 500;
             margin-top: 4px;
         }
@@ -548,34 +591,38 @@
         /* ── Testimonials ── */
         .testimonials {
             padding: 120px 0;
-            background: var(--gray-50);
+            background: var(--off-white);
         }
         .testimonials-header {
-            text-align: center;
             margin-bottom: 64px;
         }
-        .testimonials-header .section-subtitle { margin: 0 auto; }
+        .testimonials-header .section-subtitle { }
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1.3fr 1fr 1fr;
             gap: 24px;
         }
         .testimonial-card {
             background: var(--white);
-            border-radius: 16px;
-            padding: 32px;
+            border-radius: 20px;
+            padding: 36px;
             border: 1px solid var(--gray-100);
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            box-shadow: var(--shadow);
+            border-color: transparent;
         }
         .testimonial-stars {
             display: flex;
             gap: 2px;
             margin-bottom: 16px;
         }
-        .testimonial-stars svg { color: #FBBF24; }
+        .testimonial-stars svg { color: #F59E0B; }
         .testimonial-text {
             font-size: 15px;
             color: var(--gray-700);
-            line-height: 1.75;
+            line-height: 1.8;
             margin-bottom: 24px;
             font-style: italic;
         }
@@ -593,7 +640,7 @@
             justify-content: center;
             color: var(--white);
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
         }
         .testimonial-name {
             font-weight: 600;
@@ -602,7 +649,7 @@
         }
         .testimonial-role {
             font-size: 13px;
-            color: var(--gray-500);
+            color: var(--gray-400);
         }
 
         /* ── CTA ── */
@@ -612,7 +659,7 @@
         }
         .cta-box {
             background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
-            border-radius: 24px;
+            border-radius: 28px;
             padding: 80px 64px;
             text-align: center;
             position: relative;
@@ -622,7 +669,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 30% 50%, rgba(0,176,240,.15) 0%, transparent 60%);
+            background: radial-gradient(ellipse at 25% 50%, rgba(14,165,233,.15) 0%, transparent 60%);
         }
         .cta-box > * { position: relative; }
         .cta-box h2 {
@@ -631,11 +678,11 @@
             margin-bottom: 16px;
         }
         .cta-box p {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,.7);
+            font-size: 1.05rem;
+            color: rgba(255,255,255,.65);
             max-width: 500px;
             margin: 0 auto 40px;
-            line-height: 1.7;
+            line-height: 1.75;
         }
         .cta-phone {
             display: inline-flex;
@@ -652,26 +699,26 @@
         }
         .cta-phone:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(0,0,0,.2);
+            box-shadow: 0 12px 40px rgba(15,23,42,.15);
         }
+        .cta-phone:active { transform: translateY(0) scale(.98); }
         .cta-hours {
             margin-top: 24px;
             font-size: 14px;
-            color: rgba(255,255,255,.5);
+            color: rgba(255,255,255,.45);
         }
 
-        /* ── Map / Location ── */
+        /* ── Location ── */
         .location {
             padding: 120px 0;
-            background: var(--gray-50);
+            background: var(--off-white);
         }
         .location-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1.2fr;
             gap: 48px;
             align-items: start;
         }
-        .location-info { }
         .location-details {
             margin-top: 32px;
             display: flex;
@@ -685,8 +732,9 @@
         .location-item-icon {
             flex-shrink: 0;
             width: 44px; height: 44px;
-            background: rgba(0,176,240,.08);
-            border-radius: 12px;
+            background: rgba(14,165,233,.06);
+            border: 1px solid rgba(14,165,233,.1);
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -700,19 +748,17 @@
         .location-item p {
             font-size: 14px;
             color: var(--gray-500);
-            line-height: 1.6;
+            line-height: 1.65;
         }
         .map-placeholder {
             width: 100%;
             aspect-ratio: 4/3;
             background: var(--gray-200);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
-            position: relative;
         }
         .map-placeholder iframe {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             border: none;
         }
 
@@ -728,31 +774,31 @@
             margin-bottom: 48px;
         }
         .footer-brand .navbar-logo { color: var(--white); margin-bottom: 16px; }
-        .footer-brand .navbar-logo .logo-icon { background: var(--accent); color: var(--blue); }
+        .footer-brand .navbar-logo .logo-icon { background: var(--accent); color: var(--white); }
         .footer-brand p {
             font-size: 14px;
-            color: rgba(255,255,255,.5);
-            line-height: 1.7;
+            color: rgba(255,255,255,.45);
+            line-height: 1.75;
             max-width: 300px;
         }
         .footer-col h4 {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: rgba(255,255,255,.4);
+            color: rgba(255,255,255,.35);
             margin-bottom: 20px;
         }
         .footer-col a {
             display: block;
             font-size: 14px;
-            color: rgba(255,255,255,.65);
+            color: rgba(255,255,255,.6);
             margin-bottom: 12px;
             transition: var(--transition);
         }
-        .footer-col a:hover { color: var(--accent); }
+        .footer-col a:hover { color: var(--accent-muted); }
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,.08);
+            border-top: 1px solid rgba(255,255,255,.07);
             padding-top: 32px;
             display: flex;
             align-items: center;
@@ -762,14 +808,14 @@
         }
         .footer-bottom p {
             font-size: 13px;
-            color: rgba(255,255,255,.35);
+            color: rgba(255,255,255,.3);
         }
 
-        /* ── Scroll Animations ── */
+        /* ── Animations ── */
         .fade-up {
             opacity: 0;
-            transform: translateY(32px);
-            transition: opacity .7s ease, transform .7s ease;
+            transform: translateY(28px);
+            transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
         }
         .fade-up.visible {
             opacity: 1;
@@ -778,11 +824,13 @@
 
         /* ── Responsive ── */
         @media (max-width: 1024px) {
-            .hero .container { grid-template-columns: 1fr; text-align: center; }
+            .hero .container { grid-template-columns: 1fr; }
+            .hero-content { text-align: center; }
             .hero-text { margin: 0 auto 40px; }
             .hero-actions { justify-content: center; }
             .hero-visual { display: none; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .services-grid .service-card:first-child { grid-row: auto; }
             .why-grid { grid-template-columns: 1fr; gap: 48px; }
             .stats .container { grid-template-columns: repeat(2, 1fr); }
             .testimonials-grid { grid-template-columns: 1fr 1fr; }
@@ -797,9 +845,7 @@
                 display: flex;
                 flex-direction: column;
                 position: absolute;
-                top: 72px;
-                left: 0;
-                right: 0;
+                top: 72px; left: 0; right: 0;
                 background: var(--white);
                 padding: 24px;
                 border-bottom: 1px solid var(--gray-100);
@@ -808,14 +854,16 @@
             .services-grid,
             .testimonials-grid { grid-template-columns: 1fr; }
             .stats .container { grid-template-columns: 1fr 1fr; gap: 40px; }
-            .cta-box { padding: 56px 32px; }
+            .cta-box { padding: 56px 24px; }
             .footer-grid { grid-template-columns: 1fr; }
+            .brand-item { padding: 0 28px; }
+            .brand-item img { height: 28px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ── Navbar ── -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="#" class="navbar-logo">
@@ -823,6 +871,7 @@
                 Clochette Cars
             </a>
             <div class="navbar-links" id="navLinks">
+                <a href="#marques">Marques</a>
                 <a href="#services">Prestations</a>
                 <a href="#why-us">Pourquoi nous</a>
                 <a href="#avis">Avis clients</a>
@@ -838,7 +887,7 @@
         </div>
     </nav>
 
-    <!-- ── Hero ── -->
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-grid"></div>
         <div class="container">
@@ -862,7 +911,7 @@
             </div>
             <div class="hero-visual">
                 <div class="hero-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Mecanicien travaillant sur un vehicule" style="width:100%;aspect-ratio:4/3;object-fit:cover;">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Mecanicien travaillant sur un vehicule">
                 </div>
                 <div class="hero-float-card">
                     <div class="hero-float-icon">
@@ -877,7 +926,32 @@
         </div>
     </section>
 
-    <!-- ── Trust Bar ── -->
+    <!-- Brand Marquee -->
+    <section class="brand-marquee" id="marques">
+        <div class="brand-marquee-label">Specialistes des grandes marques</div>
+        <div class="marquee-track">
+            <!-- Set 1 -->
+            <div class="brand-item"><svg viewBox="0 0 200 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">PEUGEOT</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 180 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">RENAULT</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 180 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">CITROEN</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 290 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">VOLKSWAGEN</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 110 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">AUDI</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 240 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">MERCEDES</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 110 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">BMW</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 210 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">PORSCHE</text></svg></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="brand-item"><svg viewBox="0 0 200 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">PEUGEOT</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 180 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">RENAULT</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 180 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">CITROEN</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 290 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">VOLKSWAGEN</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 110 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">AUDI</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 240 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">MERCEDES</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 110 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">BMW</text></svg></div>
+            <div class="brand-item"><svg viewBox="0 0 210 40" height="32"><text x="0" y="30" font-family="Outfit,sans-serif" font-weight="800" font-size="28" fill="#1a1a2e">PORSCHE</text></svg></div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
     <section class="trust-bar">
         <div class="container">
             <div class="trust-item">
@@ -907,7 +981,7 @@
         </div>
     </section>
 
-    <!-- ── Services ── -->
+    <!-- Services -->
     <section class="services" id="services">
         <div class="container">
             <div class="services-header fade-up">
@@ -917,105 +991,66 @@
             </div>
 
             <div class="services-grid">
-                <!-- Mecanique -->
+                <!-- Mecanique - Large card -->
                 <div class="service-card fade-up">
-                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80" alt="Mecanique automobile" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+                    <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=600&q=80" alt="Mecanique automobile">
                     <div class="service-icon">
-                        <svg width="28" height="28" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+                        <svg width="26" height="26" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
                     </div>
                     <h3>Mecanique generale</h3>
                     <p>Diagnostics, reparations et entretien de tous types de vehicules, toutes marques confondues.</p>
                     <ul class="service-list">
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Vidange & filtres
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Freinage & suspension
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Distribution & embrayage
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Diagnostic electronique
-                        </li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Vidange & filtres</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Freinage & suspension</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Distribution & embrayage</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Diagnostic electronique</li>
                     </ul>
                 </div>
 
                 <!-- Carrosserie -->
                 <div class="service-card fade-up" style="transition-delay:.1s">
-                    <img src="https://images.unsplash.com/photo-1603553329474-99f95f35394f?w=600&q=80" alt="Carrosserie et peinture automobile" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+                    <img src="https://images.unsplash.com/photo-1603553329474-99f95f35394f?w=600&q=80" alt="Carrosserie et peinture automobile">
                     <div class="service-icon">
-                        <svg width="28" height="28" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                        <svg width="26" height="26" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
                     </div>
                     <h3>Carrosserie & peinture</h3>
-                    <p>Remise en etat complete de la carrosserie avec finitions professionnelles et peinture d'origine.</p>
+                    <p>Remise en etat complete avec finitions professionnelles et peinture d'origine.</p>
                     <ul class="service-list">
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Debosselage & redressage
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Peinture & vernis
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Remplacement d'elements
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Lustrage & polissage
-                        </li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Debosselage & redressage</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Peinture & vernis</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Lustrage & polissage</li>
                     </ul>
                 </div>
 
                 <!-- Pneus -->
                 <div class="service-card fade-up" style="transition-delay:.2s">
-                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80" alt="Changement de pneumatiques" style="width:100%;height:180px;object-fit:cover;border-radius:12px;margin-bottom:24px;">
+                    <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600&q=80" alt="Mecanicien changeant un pneu">
                     <div class="service-icon">
-                        <svg width="28" height="28" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
+                        <svg width="26" height="26" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
                     </div>
                     <h3>Pneumatiques</h3>
-                    <p>Montage, equilibrage et remplacement de pneus toutes dimensions et toutes saisons.</p>
+                    <p>Montage, equilibrage et remplacement de pneus toutes dimensions et saisons.</p>
                     <ul class="service-list">
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Montage & equilibrage
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Pneus ete / hiver / 4 saisons
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Geometrie & parallelisme
-                        </li>
-                        <li>
-                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            Reparation de crevaison
-                        </li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Montage & equilibrage</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Geometrie & parallelisme</li>
+                        <li><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reparation de crevaison</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── Why Us ── -->
+    <!-- Why Us -->
     <section class="why-us" id="why-us">
         <div class="container">
             <div class="why-grid">
                 <div class="why-image fade-up">
-                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80" alt="Atelier de reparation automobile" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;">
+                    <img src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=800&q=80" alt="Atelier de reparation automobile">
                 </div>
                 <div class="fade-up" style="transition-delay:.15s">
                     <span class="section-label">Pourquoi nous choisir</span>
                     <h2 class="section-title">L'excellence<br>au service de<br>votre auto</h2>
                     <p class="section-subtitle">Un garage a taille humaine qui allie expertise technique et relation de confiance.</p>
-
                     <div class="why-features">
                         <div class="why-feature">
                             <div class="why-feature-icon">
@@ -1050,7 +1085,7 @@
         </div>
     </section>
 
-    <!-- ── Stats ── -->
+    <!-- Stats -->
     <section class="stats">
         <div class="container">
             <div class="stat-item fade-up">
@@ -1072,7 +1107,7 @@
         </div>
     </section>
 
-    <!-- ── Testimonials ── -->
+    <!-- Testimonials -->
     <section class="testimonials" id="avis">
         <div class="container">
             <div class="testimonials-header fade-up">
@@ -1108,7 +1143,7 @@
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p class="testimonial-text">"Excellent accueil, equipe a l'ecoute. Ils ont pris le temps de m'expliquer les reparations necessaires. Travail impeccable sur ma carrosserie."</p>
+                    <p class="testimonial-text">"Excellent accueil, equipe a l'ecoute. Ils ont pris le temps de m'expliquer les reparations necessaires. Travail impeccable."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">PD</div>
                         <div>
@@ -1126,7 +1161,7 @@
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                     </div>
-                    <p class="testimonial-text">"Changement de pneus rapide et efficace. Super rapport qualite-prix. L'equipe est vraiment sympathique et de bon conseil."</p>
+                    <p class="testimonial-text">"Changement de pneus rapide et efficace. Super rapport qualite-prix. L'equipe est sympathique et de bon conseil."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SB</div>
                         <div>
@@ -1139,11 +1174,11 @@
         </div>
     </section>
 
-    <!-- ── CTA ── -->
+    <!-- CTA -->
     <section class="cta" id="rdv">
         <div class="container">
             <div class="cta-box fade-up">
-                <span class="section-label" style="color: rgba(255,255,255,.5);">Rendez-vous</span>
+                <span class="section-label" style="color: rgba(255,255,255,.45);">Rendez-vous</span>
                 <h2>Prenez rendez-vous<br>par telephone</h2>
                 <p>Appelez-nous pour planifier l'entretien ou la reparation de votre vehicule. Notre equipe vous repond du lundi au vendredi.</p>
                 <a href="tel:+33400000000" class="cta-phone">
@@ -1155,7 +1190,7 @@
         </div>
     </section>
 
-    <!-- ── Location ── -->
+    <!-- Location -->
     <section class="location" id="contact">
         <div class="container">
             <div class="location-grid">
@@ -1163,7 +1198,6 @@
                     <span class="section-label">Nous trouver</span>
                     <h2 class="section-title">Venez nous<br>rendre visite</h2>
                     <p class="section-subtitle">Situe en zone d'activite de Chassagne, notre garage est facilement accessible depuis l'autoroute A7.</p>
-
                     <div class="location-details">
                         <div class="location-item">
                             <div class="location-item-icon">
@@ -1194,7 +1228,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="map-placeholder fade-up" style="transition-delay:.15s">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.5!2d4.8!3d45.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDM2JzAwLjAiTiA0wrA0OCcwMC4wIkU!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
@@ -1202,7 +1235,7 @@
         </div>
     </section>
 
-    <!-- ── Footer ── -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1241,7 +1274,6 @@
         </div>
     </footer>
 
-    <!-- ── Scroll Animation Script ── -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1253,14 +1285,11 @@
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,.08)';
-            } else {
-                navbar.style.boxShadow = 'none';
-            }
+            navbar.style.boxShadow = window.scrollY > 50
+                ? '0 2px 20px rgba(15,23,42,.06)'
+                : 'none';
         });
     </script>
 </body>
