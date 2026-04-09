@@ -370,9 +370,10 @@
             transition: opacity .3s ease;
         }
         .brand-item:hover { opacity: 1; }
-        .brand-item svg {
+        .brand-item img {
             height: 44px;
             width: auto;
+            object-fit: contain;
         }
 
         /* ── Trust Bar ── */
@@ -922,141 +923,23 @@
     <section class="brand-marquee" id="marques">
         <div class="brand-marquee-label">Specialistes des grandes marques</div>
         <div class="marquee-track">
-            <!-- Peugeot - Lion head simplified -->
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M25 5C15 5 8 15 8 25c0 12 8 20 17 20 5 0 9-3 12-7-2 1-4 2-6 2-8 0-14-7-14-15 0-6 3-11 8-14l4-2c2 3 3 7 3 11 0 5-2 9-5 12l3 2c4-4 7-9 7-14 0-6-2-11-6-15l-3 0z" transform="translate(0,0) scale(0.9)"/>
-                    <text x="42" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">PEUGEOT</text>
-                </svg>
-            </div>
-            <!-- Renault - Diamond -->
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M20 5 L35 25 L20 45 L5 25 Z" fill="none" stroke="#1e293b" stroke-width="3"/>
-                    <path d="M14 25 L20 13 L26 25 L20 37 Z" fill="none" stroke="#1e293b" stroke-width="2"/>
-                    <text x="44" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">RENAULT</text>
-                </svg>
-            </div>
-            <!-- Citroen - Double Chevron -->
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M10 12 L22 25 L10 38" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20 12 L32 25 L20 38" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="42" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">CITROEN</text>
-                </svg>
-            </div>
-            <!-- Volkswagen - VW circle -->
-            <div class="brand-item">
-                <svg viewBox="0 0 180 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <path d="M12 14 L22 38 L32 14" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 14 L22 30 L29 14" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="15" letter-spacing="0.5">VOLKSWAGEN</text>
-                </svg>
-            </div>
-            <!-- Audi - Four Rings -->
-            <div class="brand-item">
-                <svg viewBox="0 0 120 50" fill="none" stroke="#1e293b" stroke-width="2.2">
-                    <circle cx="16" cy="25" r="10"/><circle cx="32" cy="25" r="10"/><circle cx="48" cy="25" r="10"/><circle cx="64" cy="25" r="10"/>
-                    <text x="80" y="33" fill="#1e293b" stroke="none" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="1">AUDI</text>
-                </svg>
-            </div>
-            <!-- Mercedes - Three-pointed star -->
-            <div class="brand-item">
-                <svg viewBox="0 0 170 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <line x1="22" y1="7" x2="22" y2="25" stroke="#1e293b" stroke-width="2.2"/>
-                    <line x1="22" y1="25" x2="6.5" y2="40" stroke="#1e293b" stroke-width="2.2"/>
-                    <line x1="22" y1="25" x2="37.5" y2="40" stroke="#1e293b" stroke-width="2.2"/>
-                    <circle cx="22" cy="25" r="2.5"/>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="15" letter-spacing="0.5">MERCEDES</text>
-                </svg>
-            </div>
-            <!-- BMW - Circle divided -->
-            <div class="brand-item">
-                <svg viewBox="0 0 110 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <line x1="22" y1="6" x2="22" y2="44" stroke="#1e293b" stroke-width="1.8"/>
-                    <line x1="3" y1="25" x2="41" y2="25" stroke="#1e293b" stroke-width="1.8"/>
-                    <text x="8" y="21" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">B</text>
-                    <text x="25" y="21" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">M</text>
-                    <text x="15" y="36" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">W</text>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="1">BMW</text>
-                </svg>
-            </div>
-            <!-- Porsche - Shield -->
-            <div class="brand-item">
-                <svg viewBox="0 0 150 50" fill="#1e293b">
-                    <path d="M10 8 L34 8 L34 32 Q22 46 10 32 Z" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
-                    <line x1="10" y1="20" x2="34" y2="20" stroke="#1e293b" stroke-width="1.5"/>
-                    <line x1="22" y1="8" x2="22" y2="20" stroke="#1e293b" stroke-width="1.5"/>
-                    <text x="44" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="17" letter-spacing="0.5">PORSCHE</text>
-                </svg>
-            </div>
+            <div class="brand-item"><img src="public/logos/peugeot.svg" alt="Peugeot"></div>
+            <div class="brand-item"><img src="public/logos/renault.svg" alt="Renault"></div>
+            <div class="brand-item"><img src="public/logos/citroen.svg" alt="Citroen"></div>
+            <div class="brand-item"><img src="public/logos/vw2.svg" alt="Volkswagen"></div>
+            <div class="brand-item"><img src="public/logos/audi.svg" alt="Audi"></div>
+            <div class="brand-item"><img src="public/logos/mercedes.svg" alt="Mercedes-Benz"></div>
+            <div class="brand-item"><img src="public/logos/bmw.svg" alt="BMW"></div>
+            <div class="brand-item"><img src="public/logos/porsche.svg" alt="Porsche"></div>
             <!-- Duplicate for seamless loop -->
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M25 5C15 5 8 15 8 25c0 12 8 20 17 20 5 0 9-3 12-7-2 1-4 2-6 2-8 0-14-7-14-15 0-6 3-11 8-14l4-2c2 3 3 7 3 11 0 5-2 9-5 12l3 2c4-4 7-9 7-14 0-6-2-11-6-15l-3 0z" transform="translate(0,0) scale(0.9)"/>
-                    <text x="42" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">PEUGEOT</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M20 5 L35 25 L20 45 L5 25 Z" fill="none" stroke="#1e293b" stroke-width="3"/>
-                    <path d="M14 25 L20 13 L26 25 L20 37 Z" fill="none" stroke="#1e293b" stroke-width="2"/>
-                    <text x="44" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">RENAULT</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 140 50" fill="#1e293b">
-                    <path d="M10 12 L22 25 L10 38" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20 12 L32 25 L20 38" fill="none" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="42" y="35" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="0.5">CITROEN</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 180 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <path d="M12 14 L22 38 L32 14" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M15 14 L22 30 L29 14" fill="none" stroke="#1e293b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="15" letter-spacing="0.5">VOLKSWAGEN</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 120 50" fill="none" stroke="#1e293b" stroke-width="2.2">
-                    <circle cx="16" cy="25" r="10"/><circle cx="32" cy="25" r="10"/><circle cx="48" cy="25" r="10"/><circle cx="64" cy="25" r="10"/>
-                    <text x="80" y="33" fill="#1e293b" stroke="none" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="1">AUDI</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 170 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <line x1="22" y1="7" x2="22" y2="25" stroke="#1e293b" stroke-width="2.2"/>
-                    <line x1="22" y1="25" x2="6.5" y2="40" stroke="#1e293b" stroke-width="2.2"/>
-                    <line x1="22" y1="25" x2="37.5" y2="40" stroke="#1e293b" stroke-width="2.2"/>
-                    <circle cx="22" cy="25" r="2.5"/>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="15" letter-spacing="0.5">MERCEDES</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 110 50" fill="#1e293b">
-                    <circle cx="22" cy="25" r="19" fill="none" stroke="#1e293b" stroke-width="2.5"/>
-                    <line x1="22" y1="6" x2="22" y2="44" stroke="#1e293b" stroke-width="1.8"/>
-                    <line x1="3" y1="25" x2="41" y2="25" stroke="#1e293b" stroke-width="1.8"/>
-                    <text x="8" y="21" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">B</text>
-                    <text x="25" y="21" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">M</text>
-                    <text x="15" y="36" font-family="Outfit,sans-serif" font-weight="800" font-size="8" letter-spacing="0.3">W</text>
-                    <text x="48" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="18" letter-spacing="1">BMW</text>
-                </svg>
-            </div>
-            <div class="brand-item">
-                <svg viewBox="0 0 150 50" fill="#1e293b">
-                    <path d="M10 8 L34 8 L34 32 Q22 46 10 32 Z" fill="none" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
-                    <line x1="10" y1="20" x2="34" y2="20" stroke="#1e293b" stroke-width="1.5"/>
-                    <line x1="22" y1="8" x2="22" y2="20" stroke="#1e293b" stroke-width="1.5"/>
-                    <text x="44" y="33" font-family="Outfit,sans-serif" font-weight="700" font-size="17" letter-spacing="0.5">PORSCHE</text>
-                </svg>
-            </div>
+            <div class="brand-item"><img src="public/logos/peugeot.svg" alt="Peugeot"></div>
+            <div class="brand-item"><img src="public/logos/renault.svg" alt="Renault"></div>
+            <div class="brand-item"><img src="public/logos/citroen.svg" alt="Citroen"></div>
+            <div class="brand-item"><img src="public/logos/vw2.svg" alt="Volkswagen"></div>
+            <div class="brand-item"><img src="public/logos/audi.svg" alt="Audi"></div>
+            <div class="brand-item"><img src="public/logos/mercedes.svg" alt="Mercedes-Benz"></div>
+            <div class="brand-item"><img src="public/logos/bmw.svg" alt="BMW"></div>
+            <div class="brand-item"><img src="public/logos/porsche.svg" alt="Porsche"></div>
         </div>
     </section>
 
@@ -1133,7 +1016,7 @@
 
                 <!-- Pneus -->
                 <div class="service-card fade-up" style="transition-delay:.2s">
-                    <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600&q=80" alt="Mecanicien changeant un pneu">
+                    <img src="000258017_600x400_c.jpg" alt="Mecanicien changeant un pneu">
                     <div class="service-icon">
                         <svg width="26" height="26" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="22"/><line x1="2" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="22" y2="12"/></svg>
                     </div>
